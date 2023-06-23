@@ -23,7 +23,7 @@ open -a Xcode .
 ```
 
 ## Executing program
-### For the application:
+### For the Application:
 * Choose the “ThahabHub” target from the scheme menu in Xcode.
 * Click the "Run" button or press `Command-R` to build and run the project.
 * Connect your iOS device to your computer, or choose a simulator from the "Devices and Simulators" window in Xcode.
