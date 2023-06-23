@@ -6,72 +6,93 @@
 //
 
 import SwiftUI
-struct GoldPrice: Codable{
+struct GoldPrice: Codable {
     var price_gram_24k: Double
     var price_gram_21k: Double
+    var price_gram_22k: Double
     var price_gram_18k: Double
 }
 
 struct MainPage: View {
-    @State private var price = GoldPrice(price_gram_24k: 0, price_gram_21k: 0, price_gram_18k: 0)
-    
+    @State private var showingSheet = false
+    @State var weight: String = ""
+    @State var price = GoldPrice(price_gram_24k: 0, price_gram_21k: 0,price_gram_22k: 0, price_gram_18k: 0)
     var body: some View {
-        VStack{
-            HStack{
-                Text("Thahab Hub")
-                    .font(.subheadline)
+        NavigationView{
+            VStack(alignment: .leading){
+                VStack {
+                    Text("Thahab Hub")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(Color("gold2"))
+                    Divider()
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top)
+                Text("Current Gold Price in (SAR)")
+                    .font(.title3)
+                    .padding()
                     .bold()
-                Image("logo")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-            }.padding(.trailing,230)
-            Divider()
-            Text("Current Gold Price in Saudi Arabia in (SAR)")
-                .padding(.top,30)
-                .bold()
-                .multilineTextAlignment(.center)
-            Group{
-                ZStack{
-                    Rectangle()
-                        .frame(width: 350,height: 200)
-                        .foregroundColor(Color.yellow.opacity(0.1))
-                        .cornerRadius(20)
-                        .shadow(radius: 5)
-                    VStack{
-                        HStack{
-                            Text("Gram Price for 18k: ").bold()
-                            Text("\(price.price_gram_18k)")
+                Group{
+                    List{
+                        Section("Gram Price for 18k: "){
+                            HStack{
+                                Text("\(price.price_gram_18k, specifier: "%.2f")")
+                                    .multilineTextAlignment(.center)
+                            }.padding(.horizontal)
+                                .padding(.vertical, 10)
+                        }.listRowBackground(Color.yellow.opacity(0.2))
+                        
+                        Section("Gram Price for 21k: "){
+                            HStack{
+                                Text("\(price.price_gram_21k, specifier: "%.2f")")
+                            }.padding(.horizontal)
+                                .padding(.vertical, 10)
+                        }.listRowBackground(Color.yellow.opacity(0.2))
+                        
+                        
+                        Section("Gram Price for 22k: "){
+                            HStack{
+                                Text("\(price.price_gram_22k, specifier: "%.2f")")
+                            }.padding(.horizontal)
+                                .padding(.vertical, 10)
+                        }.listRowBackground(Color.yellow.opacity(0.2))
+                        Section("Gram Price for 24k: "){
+                            HStack{
+                                Text("\(price.price_gram_24k, specifier: "%.2f")")
+                            }.padding(.horizontal)
+                                .padding(.vertical, 10)
+                        }.listRowBackground(Color.yellow.opacity(0.2))
+                        
+                        Button(action: {
+                            showingSheet.toggle()
+                        }) {
+                            HStack(spacing: 8) {
+                                Text("Gold Price Calculator ")
+                                    .font(.headline)
+                                    .fontWeight(.semibold)
+                                Image(systemName: "arrow.right")
+                                    .font(.callout)
+                            }
+                            .padding(.vertical, 12)
+                            .frame(maxWidth: .infinity)
+                            .background(Color("gold2"))
+                            .cornerRadius(8)
+                            .shadow(radius: 2)
+                        }
+                        .buttonStyle(.plain)
+                        .sheet(isPresented: $showingSheet) {
+                            CalculateView(weight: $weight, price: $price)
+                                .preferredColorScheme(.light)
                         }.padding()
-                        HStack{
-                            Text("Gram Price for 21k: ").bold()
-                            Text("\(price.price_gram_21k)")
-                        }.padding()
-                        HStack{
-                            Text("Gram Price for 24k: ").bold()
-                            Text("\(price.price_gram_24k)")
-                        }.padding()
-                    }
+                    
+                }.scrollContentBackground(.hidden)
                 }
             }
-            
-            Group{
-                Text("To Calculate Your Gold Price, Press the button")
-                    .padding(.top, 100)
-                
-                Button("Calculate"){
-                }
-                .bold()
-                .frame(width: 100, height: 25)
-                .background(Color.orange.opacity(0.5))
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
-                Spacer()
-                Text("")
+            .task {
+                await loadData ()
             }
-        }
-        .task {
-            await loadData ()
-        }
+        }.accentColor(.black)
     }
     
     func loadData( ) async {
@@ -81,7 +102,7 @@ struct MainPage: View {
             request.setValue("goldapi-1z5tdrligfdev3-io", forHTTPHeaderField: "x-access-token")
             
             let (data, response) = try await URLSession.shared.data(for: request)
-            let isSuccessful = isSuccessful(response: response as! HTTPURLResponse)
+            _ = isSuccessful(response: response as! HTTPURLResponse)
             print(String(data: data, encoding: .utf8))
             let serverPrice = try JSONDecoder().decode(GoldPrice.self, from: data)
             price = serverPrice
@@ -91,14 +112,14 @@ struct MainPage: View {
         }
     }
     
-}
-func isSuccessful(response: HTTPURLResponse) -> Bool {
-    guard response.statusCode >= 200 && response.statusCode < 300 else {
-        print("Status code is not in the 200s")
-        return false
+    func isSuccessful(response: HTTPURLResponse) -> Bool {
+        guard response.statusCode >= 200 && response.statusCode < 300 else {
+            print("Status code is not in the 200s")
+            return false
+        }
+        print("Status code is in the 200s")
+        return true
     }
-    print("Status code is in the 200s")
-    return true
 }
 
 struct MainPage_Previews: PreviewProvider {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0328470B2A41B14A00981395 /* GoldWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F875B72A3F5A56005E9D61 /* GoldWidget.swift */; };
 		034424AE2A2BC15B0062966B /* ThahabHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424AD2A2BC15B0062966B /* ThahabHubApp.swift */; };
 		034424B02A2BC15B0062966B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424AF2A2BC15B0062966B /* ContentView.swift */; };
 		034424B22A2BC15D0062966B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034424B12A2BC15D0062966B /* Assets.xcassets */; };
@@ -14,10 +15,43 @@
 		034424BC2A2BC46F0062966B /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424BB2A2BC46F0062966B /* MainPage.swift */; };
 		034424BE2A2BE2EE0062966B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424BD2A2BE2EE0062966B /* WelcomeView.swift */; };
 		034424C02A2BE5790062966B /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424BF2A2BE5790062966B /* CalculateView.swift */; };
-		034424C22A2BE7460062966B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424C12A2BE7460062966B /* TabBar.swift */; };
-		034424C42A2BE7870062966B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424C32A2BE7870062966B /* ProfileView.swift */; };
-		034424C62A2BE8340062966B /* TheHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034424C52A2BE8340062966B /* TheHub.swift */; };
+		037E44702A4111A70047EAE7 /* GoldWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F875B72A3F5A56005E9D61 /* GoldWidget.swift */; };
+		037E44712A4111AA0047EAE7 /* GoldWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F875B52A3F5A56005E9D61 /* GoldWidgetLiveActivity.swift */; };
+		037E44722A4111AD0047EAE7 /* GoldWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F875B32A3F5A56005E9D61 /* GoldWidgetBundle.swift */; };
+		037E44742A41122D0047EAE7 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E44732A41122C0047EAE7 /* SuggestionView.swift */; };
+		037E44762A4112540047EAE7 /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E44752A4112540047EAE7 /* SuggestionModel.swift */; };
+		03E679D72A411DED00DD2F79 /* RingSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E679D62A411DED00DD2F79 /* RingSize.swift */; };
+		03E679D92A411FEF00DD2F79 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E679D82A411FEF00DD2F79 /* TabBar.swift */; };
+		03E679DB2A41247B00DD2F79 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E679DA2A41247B00DD2F79 /* AboutUs.swift */; };
+		03F875AF2A3F5A56005E9D61 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F875AE2A3F5A56005E9D61 /* WidgetKit.framework */; };
+		03F875B12A3F5A56005E9D61 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F875B02A3F5A56005E9D61 /* SwiftUI.framework */; };
+		03F875BA2A3F5A58005E9D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F875B92A3F5A58005E9D61 /* Assets.xcassets */; };
+		03F875BE2A3F5A58005E9D61 /* GoldWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 03F875AC2A3F5A56005E9D61 /* GoldWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03F875BC2A3F5A58005E9D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034424A22A2BC15B0062966B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03F875AB2A3F5A56005E9D61;
+			remoteInfo = GoldWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03F875BF2A3F5A58005E9D61 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				03F875BE2A3F5A58005E9D61 /* GoldWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		034424AA2A2BC15B0062966B /* ThahabHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThahabHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,9 +62,19 @@
 		034424BB2A2BC46F0062966B /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		034424BD2A2BE2EE0062966B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		034424BF2A2BE5790062966B /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
-		034424C12A2BE7460062966B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		034424C32A2BE7870062966B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		034424C52A2BE8340062966B /* TheHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHub.swift; sourceTree = "<group>"; };
+		037E44732A41122C0047EAE7 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		037E44752A4112540047EAE7 /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
+		03E679D62A411DED00DD2F79 /* RingSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSize.swift; sourceTree = "<group>"; };
+		03E679D82A411FEF00DD2F79 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		03E679DA2A41247B00DD2F79 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
+		03F875AC2A3F5A56005E9D61 /* GoldWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GoldWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F875AE2A3F5A56005E9D61 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		03F875B02A3F5A56005E9D61 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		03F875B32A3F5A56005E9D61 /* GoldWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldWidgetBundle.swift; sourceTree = "<group>"; };
+		03F875B52A3F5A56005E9D61 /* GoldWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		03F875B72A3F5A56005E9D61 /* GoldWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldWidget.swift; sourceTree = "<group>"; };
+		03F875B92A3F5A58005E9D61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03F875BB2A3F5A58005E9D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +85,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03F875A92A3F5A56005E9D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F875B12A3F5A56005E9D61 /* SwiftUI.framework in Frameworks */,
+				03F875AF2A3F5A56005E9D61 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				034424AC2A2BC15B0062966B /* ThahabHub */,
+				03F875B22A3F5A56005E9D61 /* GoldWidget */,
+				03F875AD2A3F5A56005E9D61 /* Frameworks */,
 				034424AB2A2BC15B0062966B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				034424AA2A2BC15B0062966B /* ThahabHub.app */,
+				03F875AC2A3F5A56005E9D61 /* GoldWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,11 +123,13 @@
 				034424BB2A2BC46F0062966B /* MainPage.swift */,
 				034424BD2A2BE2EE0062966B /* WelcomeView.swift */,
 				034424BF2A2BE5790062966B /* CalculateView.swift */,
-				034424C32A2BE7870062966B /* ProfileView.swift */,
-				034424C12A2BE7460062966B /* TabBar.swift */,
 				034424B12A2BC15D0062966B /* Assets.xcassets */,
-				034424C52A2BE8340062966B /* TheHub.swift */,
+				037E44752A4112540047EAE7 /* SuggestionModel.swift */,
+				037E44732A41122C0047EAE7 /* SuggestionView.swift */,
 				034424B32A2BC15D0062966B /* Preview Content */,
+				03E679D62A411DED00DD2F79 /* RingSize.swift */,
+				03E679D82A411FEF00DD2F79 /* TabBar.swift */,
+				03E679DA2A41247B00DD2F79 /* AboutUs.swift */,
 			);
 			path = ThahabHub;
 			sourceTree = "<group>";
@@ -85,6 +143,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		03F875AD2A3F5A56005E9D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03F875AE2A3F5A56005E9D61 /* WidgetKit.framework */,
+				03F875B02A3F5A56005E9D61 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03F875B22A3F5A56005E9D61 /* GoldWidget */ = {
+			isa = PBXGroup;
+			children = (
+				03F875B32A3F5A56005E9D61 /* GoldWidgetBundle.swift */,
+				03F875B52A3F5A56005E9D61 /* GoldWidgetLiveActivity.swift */,
+				03F875B72A3F5A56005E9D61 /* GoldWidget.swift */,
+				03F875B92A3F5A58005E9D61 /* Assets.xcassets */,
+				03F875BB2A3F5A58005E9D61 /* Info.plist */,
+			);
+			path = GoldWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,15 +174,36 @@
 				034424A62A2BC15B0062966B /* Sources */,
 				034424A72A2BC15B0062966B /* Frameworks */,
 				034424A82A2BC15B0062966B /* Resources */,
+				03F875BF2A3F5A58005E9D61 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03F875BD2A3F5A58005E9D61 /* PBXTargetDependency */,
+			);
+			name = ThahabHub;
+			packageProductDependencies = (
+			);
+			productName = ThahabHub;
+			productReference = 034424AA2A2BC15B0062966B /* ThahabHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03F875AB2A3F5A56005E9D61 /* GoldWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F875C22A3F5A58005E9D61 /* Build configuration list for PBXNativeTarget "GoldWidgetExtension" */;
+			buildPhases = (
+				03F875A82A3F5A56005E9D61 /* Sources */,
+				03F875A92A3F5A56005E9D61 /* Frameworks */,
+				03F875AA2A3F5A56005E9D61 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ThahabHub;
-			productName = ThahabHub;
-			productReference = 034424AA2A2BC15B0062966B /* ThahabHub.app */;
-			productType = "com.apple.product-type.application";
+			name = GoldWidgetExtension;
+			productName = GoldWidgetExtension;
+			productReference = 03F875AC2A3F5A56005E9D61 /* GoldWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -112,11 +212,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					034424A92A2BC15B0062966B = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					03F875AB2A3F5A56005E9D61 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -129,11 +232,14 @@
 				Base,
 			);
 			mainGroup = 034424A12A2BC15B0062966B;
+			packageReferences = (
+			);
 			productRefGroup = 034424AB2A2BC15B0062966B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				034424A92A2BC15B0062966B /* ThahabHub */,
+				03F875AB2A3F5A56005E9D61 /* GoldWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +254,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03F875AA2A3F5A56005E9D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F875BA2A3F5A58005E9D61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -155,18 +269,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E679D92A411FEF00DD2F79 /* TabBar.swift in Sources */,
 				034424B02A2BC15B0062966B /* ContentView.swift in Sources */,
 				034424C02A2BE5790062966B /* CalculateView.swift in Sources */,
+				0328470B2A41B14A00981395 /* GoldWidget.swift in Sources */,
 				034424AE2A2BC15B0062966B /* ThahabHubApp.swift in Sources */,
-				034424C22A2BE7460062966B /* TabBar.swift in Sources */,
 				034424BC2A2BC46F0062966B /* MainPage.swift in Sources */,
-				034424C42A2BE7870062966B /* ProfileView.swift in Sources */,
+				03E679D72A411DED00DD2F79 /* RingSize.swift in Sources */,
+				037E44762A4112540047EAE7 /* SuggestionModel.swift in Sources */,
+				03E679DB2A41247B00DD2F79 /* AboutUs.swift in Sources */,
+				037E44742A41122D0047EAE7 /* SuggestionView.swift in Sources */,
 				034424BE2A2BE2EE0062966B /* WelcomeView.swift in Sources */,
-				034424C62A2BE8340062966B /* TheHub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F875A82A3F5A56005E9D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037E44712A4111AA0047EAE7 /* GoldWidgetLiveActivity.swift in Sources */,
+				037E44702A4111A70047EAE7 /* GoldWidget.swift in Sources */,
+				037E44722A4111AD0047EAE7 /* GoldWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03F875BD2A3F5A58005E9D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03F875AB2A3F5A56005E9D61 /* GoldWidgetExtension */;
+			targetProxy = 03F875BC2A3F5A58005E9D61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034424B62A2BC15D0062966B /* Debug */ = {
@@ -286,6 +421,7 @@
 		034424B92A2BC15D0062966B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +451,7 @@
 		034424BA2A2BC15D0062966B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +478,62 @@
 			};
 			name = Release;
 		};
+		03F875C02A3F5A58005E9D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RWX4BM392G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoldWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GoldWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThahabHub.GoldWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03F875C12A3F5A58005E9D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RWX4BM392G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoldWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GoldWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThahabHub.GoldWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +551,15 @@
 			buildConfigurations = (
 				034424B92A2BC15D0062966B /* Debug */,
 				034424BA2A2BC15D0062966B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F875C22A3F5A58005E9D61 /* Build configuration list for PBXNativeTarget "GoldWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F875C02A3F5A58005E9D61 /* Debug */,
+				03F875C12A3F5A58005E9D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

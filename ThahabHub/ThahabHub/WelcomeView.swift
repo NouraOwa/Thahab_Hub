@@ -8,29 +8,24 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State var isActive: Bool = false
+    
     var body: some View {
-        NavigationStack{
-            ZStack{
-                Color(.yellow)
-                    .opacity(0.1)
-                    .ignoresSafeArea()
-                
-                VStack{
-                    Group{
-                        Text("Thahab Hub")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding()
-                        Text("Welcome to The largest gathering platform\n for gold lovers in the Middle East")
-                            .font(.subheadline)
-                            .padding(.bottom,40)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                            .bold()
-                        NavigationLink(destination: TabBar()) {
-                            Image("logo")
-                        }
-                    }
+        ZStack {
+            Color(.white)
+            if self.isActive {
+                DevTechieCustomTabbar()
+            } else {
+                Image("logo3")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 500, height: 500)
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                withAnimation {
+                    self.isActive = true
                 }
             }
         }
